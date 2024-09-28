@@ -29,3 +29,10 @@ npm install
 ```bash
 node app.js
 ```
+### Anwendung im Browser ausprobieren 😊
+```bash
+http://localhost:5001/
+```
+
+Es kann jederzeit ein neuer User Registriert werden. Nach jeder Regestrierung wird man zum Login redirected. Dann bitte mit den gewählten Credentials einloggen :)
+Ansonsten einfach mit luke@tatooine.net einloggen, Passwort: PotRacer1
