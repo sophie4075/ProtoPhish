@@ -1,0 +1,569 @@
+
+nav {
+    color: #1a1a1a;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    color: #1a1a1a;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 8px;
+    font-family: 'Oswald', sans-serif;
+    transition: all 1s;
+}
+
+
+nav img {
+    width: 50px;
+    object-fit: cover;
+}
+
+/*-------Navigation animation------*/
+nav li a,
+nav li a:after,
+nav li a:before {
+    transition: all .5s;
+}
+
+nav li a:hover {
+    color: #002eff;
+}
+
+/* stroke */
+nav li a {
+    position: relative;
+}
+
+nav.stroke li a:after,
+nav li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #002eff;
+    height: 1px;
+}
+
+nav.stroke li a:hover:after {
+    width: 100%;
+}
+
+nav li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+
+nav li a:hover {
+    color: #002eff;
+    z-index: 1;
+}
+
+nav li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    opacity: 1;
+}
+
+/*---------------------------------*/
+#login-container, #register-container {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    flex-direction: column;
+
+}
+
+.form-signin, .form-register {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signin h1, button, .form-register h1, .form-register button, .training-overview button {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+h1, h3, h2, .dashboard .jumbotron a, .training-overview a {
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.dashboard .jumbotron a, .dashboard h3, .training-overview a, h2 {
+    text-transform: uppercase;
+}
+
+input::placeholder, .dashboard p {
+    font-family: "Quattrocento", system-ui;
+}
+
+
+.form-signin .form-control, .form-register .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+
+.form-signin input[type="email"], .form-register input[type="email"], .form-register input[type="text"], .form-register input[id="password"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"], .form-register input[id="passwordConfirm"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-register input[type="email"], .form-register input[type="text"], .form-register input[id="password"] {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0;
+}
+
+.avatar-ctn {
+    background-color: cadetblue;
+    text-align: center;
+}
+
+#avatar {
+    width: 50%;
+    padding: 5%;
+}
+
+
+/*------Phishing Quiz ------- */
+
+.mail-header .subject {
+    font-size: 27px;
+}
+
+.mail-info img {
+    height: 64px;
+    margin-bottom: auto;
+    margin-right: 10px;
+    margin-top: auto;
+    object-fit: contain;
+    width: 64px;
+}
+
+.sender, .subject-date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mailBody {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 5%;
+    border-radius: 5px;
+}
+
+.header.amazon-style {
+    text-align: left;
+    border-top: orange 2px solid;
+    padding: 10px 0;
+}
+
+.header.amazon-style img {
+    max-width: 100%;
+    height: auto;
+    width: 20%;
+    object-fit: cover;
+}
+
+.header.paypal-style, .header.netflix-style {
+    position: relative;
+    height: 10vh;
+}
+
+.header.paypal-style img, .header.netflix-style img{
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+
+}
+
+.mail-content {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.header.Max.Müller-style, .mail-content.Max.Müller-style a, .header.github-style, .header.github-commit-style, .header.linkedin-style, .header.apple-style  {
+    display: none;
+}
+
+.header.sparkasse-style img {
+    width: 200px;
+    margin-left: 1.5rem;
+
+}
+
+/*.header {
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}*/
+.btn-confirm {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#tipModal h5, #top-bar-heading, #hintModal h5, .score {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+
+#tipModal p, #hintModal p {
+    font-size: 14px;
+}
+
+.inbox, .inbox-list {
+    padding-left: 1rem !important;
+}
+
+.mail-list {
+    background-color: #f5f5f5;
+    border-right: 4px solid black;
+    min-height: calc(100vh - 103px);
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.mail-preview {
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12pt;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.detail-block {
+    padding-top: 10px;
+}
+
+.mail-content.paypal-style h1 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050; /* Über anderen Elementen */
+}
+
+
+/*------ Intro -------*/
+#intro-title, #intro-quiz h2{
+    text-transform: uppercase;
+    font-family: "Calistoga", serif;
+}
+#introTraining{
+    background-color: #c3eff7;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Vollbildhöhe für die Zentrierung */
+}
+
+#video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#introTraining video {
+    width: 100%;
+    height: auto;
+    max-height: 40vh; /* Größe des Videos beschränken */
+    object-fit: contain;
+}
+
+#dialogue-box {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#dialogue-text {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: "Calistoga", serif;
+}
+
+#choices {
+    /*display: flex;*/
+    gap: 10px;
+    justify-content: center;
+}
+
+#main-content button {
+    padding: 10px 20px;
+    background-color: #FFD7FE;
+    color: #1a1a1a;
+    cursor: pointer;
+    font-family: "Calistoga", serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    /*font-weight: bold;*/
+    border-radius: 2em;
+    border: none;
+}
+
+#main-content button:hover {
+    background-color: #e7dcce;
+}
+
+/* Animation */
+#intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b699ee;
+    z-index: 1000;
+}
+
+
+@keyframes circleWipe {
+    0% {
+        clip-path: circle(100%);
+    }
+    100% {
+        clip-path: circle(0%);
+    }
+}
+
+.hidden {
+    animation: circleWipe 1.5s ease-in-out forwards;
+}
+
+.hidden #intro-title {
+    opacity: 0;
+}
+
+#intro-quiz .sections {
+    position: relative;
+}
+
+#intro-quiz .section {
+    justify-content: center;  /* Zentriert den Inhalt horizontal */
+    align-items: center;
+    min-height: 100vh;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Section, die sichtbar ist */
+#intro-quiz .section.visible {
+    opacity: 1;
+}
+
+#intro-quiz button{
+    font-size: 12px;
+    height: 100%;
+}
+
+#intro-quiz p, .choice-label, #intro-quiz li, #intro-quiz small {
+    font-size: 14px;
+}
+
+span.font-italic{
+    font-style: italic;
+}
+
+span.font-weight-bold{
+    font-weight: bold;
+}
+
+
+.content-section {
+    margin-bottom: 2em;
+}
+ #intro-quiz div.col-6.col-md-6.mb-3{
+     display: flex;
+     gap: 0.5em;
+     align-items: center;
+ }
+/*---------- Training Page ---------*/
+
+.training-overview .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.isDisabled {
+    cursor: not-allowed;
+}
+
+/*------------- Dashboard ----------------*/
+/* Allgemeine Einstellungen */
+.dashboard body {
+    background-color: #f9f9f9;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Jumbotron Styling */
+.dashboard .jumbotron {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard .jumbotron h1{
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/* Card Styling */
+.dashboard .card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.dashboard .card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard .card-title {
+    font-weight: 600;
+}
+
+/* Icon Styling */
+.dashboard .fa-eye, .dashboard .fa-fish , .dashboard .fa-star , .dashboard .fa-graduation-cap {
+    margin-right: 1em;
+}
+
+
+/* Button Styling */
+.dashboard .btn-primary {
+    background-color: #002eff;
+    border-color: #002eff;
+}
+
+.dashboard .btn-primary:hover {
+    background-color: #001dbf;
+    border-color: #001dbf;
+}
+
+/* Table Styling */
+.dashboard .table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Progress Icons */
+.dashboard .progress-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.dashboard .progress-icon i {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+
+
+

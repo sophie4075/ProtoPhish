@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quattrocento:wght@400;700&family=Press+Start+2P&display=swap&family=Calistoga&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>Proto Phish</title>
+</head>
+<body id="introTraining">
+
+<nav class="stroke">
+    <img src="/images/PhisBuster%20Logo.png" alt="Logo">
+    <ul>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/phish-quiz">Trainings</a></li>
+        <li><a href="/achievements">Achievements</a></li>
+        <li><a href="/auth/logout">Logout</a></li>
+    </ul>
+</nav>
+
+<div id="intro-screen">
+    <h1 id="intro-title">Was ist Phishing?</h1>
+</div>
+<div class="content container-fluid d-flex justify-content-center align-items-center vh-100" id="main-content">
+    <div class="row w-100 justify-content-center">
+
+        <!-- Dialogue Box -->
+        <div id="dialogue-box" class="col-lg-6 flex-column align-items-center justify-content-center">
+            <div id="dialogue-text">
+                <!-- Dynamischer Text -->
+            </div>
+            <div id="choices" style="display: none;">
+                <!-- Dynamische Buttons -->
+            </div>
+        </div>
+        <!-- Video Container -->
+        <div id="video-container" class="col-lg-6 align-items-center justify-content-center" style="display: none;">
+            <video id="myVideo" muted>
+                <source src="/images/Phishing_Animation.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container sections" id="intro-quiz" style="display: none">
+
+
+    <div class="row">
+        <div class="col blog-main">
+
+
+            <div class="blog-post">
+
+                <div class="row featurette section visible">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">Phishing <span
+                                class="text-muted"> - Ein alter Trick, neu verpackt.</span></h2>
+                        <p class="">Zugegeben, das eben gezeigte Beispiel war vermutlich relativ leicht zu durchschauen und
+                            diese Art von E-Mail ist in den letzten Jahren so alltäglich geworden, dass sie schon fast ein Witz
+                            ist.</p>
+                        <p class="">Wir haben vermutlich alle schon einmal über die E-Mail „Nigerianischer Prinz will mir sein
+                            Vermögen schicken“- E-Mail geschmunzelt. „Das ist offensichtlich Betrug! Wie kann jemand darauf
+                            hereinfallen?“</p>
+
+                        <p class="">Nun - wenn es nicht zumindest manchmal funktionieren würde, würde es niemand tun.
+                            Außerdem führt das schnell zu dem Irrglauben, dass alle Phishing-E-Mails so offensichtlich sind, was
+                            wiederum bei uns ein falsches Gefühl von Sicherheit hinterlassen kann.</p>
+                        <button type="button" class="btn btn-dark" onclick="scrollToNextSection()">Weiter</button>
+
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
+                             alt="Phishing Attack Illustration"
+                             style="width: 500px;"
+                             src="/images/phishing_intro.png" data-holder-rendered="true">
+                        <small class="text-muted">Lektion 1/10</small>
+                    </div>
+                </div>
+
+                <div class="section">
+
+                    <div id="whats-phishing " class="row content-section">
+                        <div class="col-md-6 order-md-2">
+                            <h2 class="section-title">Was ist Phishing?</h2>
+                            <p class="">
+
+
+                                Phishing ist eine Form von Cyberkriminalität, bei der Angreifer versuchen, sensible
+                                Informationen wie Passwörter, Kreditkartendaten oder Zugangsdaten zu erlangen, indem sie
+                                sich
+                                als vertrauenswürdige Institutionen ausgeben. Diese Täuschung erfolgt meist über
+                                gefälschte
+                                E-Mails, SMS oder gefälschte Webseiten, die darauf abzielen, die Opfer dazu zu bringen,
+                                ihre
+                                persönlichen Daten preiszugeben.</p>
+                            <p class=""> Der Begriff "Phishing" leitet sich von "Password" und "Fishing" ab – die
+                                Angreifer "fischen" also nach deinen Daten.
+                                Dabei verwenden sie verschiedenste Tricks, um dich in ihre Falle zu locken, zum Beispiel
+                                durch das Schüren von Angst oder Dringlichkeit.
+                                Manchmal nutzen sie sogar persönliche Informationen, um die Nachricht besonders
+                                glaubwürdig erscheinen zu lassen.</p>
+                        </div>
+                        <div class="col-md-6 order-md-1 text-center">
+                            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
+                                 alt="Illustration of a woman who is getting phished"
+                                 style="width: 550px;" src="/images/what_is.png">
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-dark" onclick="scrollToNextSection()">Weiter</button>
+                        <small class="text-muted">Lektion 2/10</small>
+                    </div>
+                </div>
+
+
+                <div class="section">
+                    <div id="danger-of-phishing" class="row content-section align-items-center">
+                        <div class="col-md-6">
+                            <h2 class="mb-4">Warum ist Phishing so gefährlich?</h2>
+                            <p class="section-content ">
+                                Phishing ist eine der gefährlichsten Formen der Cyberkriminalität
+                                und verursacht laut BSI allein in Deutschland jährlich volkswirtschaftliche Schäden in
+                                Millionenhöhe.
+                                Was als harmlose E-Mail oder gefälschte Webseite beginnt, kann gravierende Folgen haben.
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
+                                 alt="Phishing Attack Illustration"
+                                 style="width: 250px;" src="/images/Intro.png">
+                        </div>
+                    </div>
+
+                    <div id="dangers4you" class="row content-section align-items-center">
+                        <div class="col-md-6 order-md-2">
+                            <h2 class="section-title">Risiken für Verbraucher</h2>
+                            <p class="">Die Folgen von Phishing für den Einzelnen können verheerend sein: von
+                                finanziellen Verlusten, durch die unbefugte Nutzung von Kreditkarten- oder Bankdaten,
+                                bis hin zu
+                                dauerhaftem Identitätsdiebstahl. Angreifer nutzen gestohlene Informationen, um
+                                betrügerische
+                                Geschäfte im Namen des Opfers abzuwickeln.
+                            </p>
+                        </div>
+                        <div class="col-md-6 order-md-1 text-center">
+                            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
+                                 alt="Fact sheet about phishing"
+                                 style="width: 450px; object-fit: contain" src="/images/Password.png">
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-dark" onclick="scrollToNextSection()">Weiter</button>
+                        <small class="text-muted">Lektion 3/10</small>
+                    </div>
+
+                </div>
+
+                <div class="section">
+                    <div id="danger4company" class="row content-section">
+                        <div class="col-md-6">
+                            <h2 class="mb-4">Gefährdung für Unternehmen</h2>
+                            <p class="">
+                                Angreifer nutzen Phishing als Eintrittskarte in das Unternehmensnetzwerk,
+                                indem sie gezielt Mitarbeiter täuschen, ihre Zugangsdaten preiszugeben oder schädliche
+                                Anhänge zu öffnen. Diese Phishing-E-Mails sind oft so geschickt gemacht,
+                                dass sie wie legitime Nachrichten von vertrauenswürdigen Quellen aussehen.
+                            </p>
+                            <p>Sobald ein Mitarbeiter auf einen bösartigen Link klickt oder seine Anmeldedaten eingibt,
+                                erhalten die Angreifer Zugang
+                                zum Unternehmensnetzwerk.</p>
+                            <p>Einmal im System, richten sie verheerenden Schaden an,
+                                indem sie wichtige Dateien mithilfe von Ransomware verschlüsseln und Lösegeld verlangen,
+                                um diese wieder freizugeben. Immer häufiger spähen die Angreifer parallel auch Daten
+                                aus,
+                                um zusätzlich mit der Veröffentlichung dieser sensiblen Informationen drohen zu
+                                können.</p>
+                            <p> Ein Ransomware-Angriff kann zu massiven und kostspieligen Geschäftsunterbrechungen
+                                führen
+                                und erhebliche Folgen für betroffene Unternehmen haben – in manchen Fällen kann ein
+                                solcher Befall sogar existenzbedrohend sein. </p>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
+                                 style="width: 250px;" src="/images/danger_sektion_ 02.png" alt="Phishing Illustration">
+                        </div>
+                    </div>
+                    <div class="row content-section">
+                        <div class="col-md-6 order-md-2">
+                            <p class="">
+                                Nun stell dir folgendes Szenario vor: Du bist CEO eines erfolgreichen Unternehmens.
+                                Eines Morgens erfährst du, dass das gesamte Netzwerk lahmgelegt ist –
+                                alle wichtigen Dateien sind verschlüsselt. Panik bricht aus, denn die Angreifer verlangen
+                                nicht nur ein hohes Lösegeld, sondern drohen auch, sensible Unternehmensdaten an die Öffentlichkeit zu bringen.
+                                Du fragst dich: Wie konnten diese Kriminellen so schnell und präzise zuschlagen?
+                            </p>
+                            <p>Die Antwort könnte in einer zunehmend organisierten und spezialisierten Kriminalitätsstruktur liegen. </p>
+                            <p>Das Geschäft mit Ransomware ist so lukrativ, dass sich eine regelrechte Schattenwirtschaft entwickelt hat. </p>
+                            <p> In dieser kriminellen Welt gibt es Angreifer, die sich auf bestimmte Aufgaben spezialisieren,
+                                sei es die Bereitstellung der technischen Infrastruktur, die Entwicklung der Malware oder das Erbeuten von Daten durch Access-as-a-Service (AaaS).</p>
+                            <p>Die Daten, welche oft durch <span class="font-weight-bold"> E-Mails mit schädlichen Anhängen </span> oder spezielle Schadprogramme wie <span class="font-italic">Information Stealer*</span>
+                                erlangt werden, werden dann auf Untergrundmarktplätzen verkauft.
+                            </p>
+                            <p>Befinden sich in den gesammelten Daten Zugangs- daten zu einem Firmennetz oder Session-Cookies einer Cloudanwendung, können diese für einen Ransomware-Angreifer ein Einfallstor in das entsprechende Netzwerk darstellen.</p>
+                            <small class="text-muted"><span class="font-italic">*Information Stealer werden oft als legitime Software getarnt, die im Internet zum Download angeboten wird.
+                                Sie zielen darauf ab, verschiedenste Informationen auf einem kompromittierten System zu sammeln.</span></small>
+                        </div>
+                        <div class="col-md-6 order-md-1 text-center">
+                            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
+                                 style="width: 550px;" src="/images/danger_sektion_01.png" alt="Illustration of a thief holding a file in front of a computer">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-dark" onclick="scrollToNextSection()">Weiter</button>
+                        <small class="text-muted">Lektion 4/10</small>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div id="KI-and-Phishing" class="row content-section">
+                        <div class="col-md-6">
+                            <h2 class="mb-4">Künstliche Intelligenz und Phishing</h2>
+                            <p class="">Die fortschreitende Nutzung von KI-Sprachmodellen stellt eine immer größere
+                                Bedrohung im Bereich von Phishing- und Betrugsangriffen dar. Mit der rasanten
+                                Entwicklung dieser Technologien wird es zunehmend einfacher, täuschend echte
+                                Phishing-Nachrichten zu erstellen, die kaum von legitimen Mitteilungen zu unterscheiden
+                                sind. KI-Systeme machen es möglich, Sprache nahezu perfekt zu imitieren, wodurch
+                                Nachrichten menschlicher und überzeugender klingen. Besonders gefährlich ist der Einsatz
+                                von Chatbots, die in der Lage sind, realistische Gespräche zu führen und Menschen dazu
+                                zu bringen, sensible Informationen preiszugeben – oft, ohne dass sie es überhaupt
+                                bemerken.</p>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
+                                 style="width: 350px;" src="/images/AI%20NEW.png" alt="Illustration of a roboter holding a fishing-rot (symbolic for ai and phishing)">
+                        </div>
+                    </div>
+                    <!--<div class="quiz-container">
+                        <h3>Quizfrage 4</h3>
+                        <p class="question-text"></p>
+                        <div class="choices row">
+                            <div class="col-6 col-md-6 mb-3">
+                                <input type="checkbox" name="q4-opt-1" id="q4-opt-1" class="choice-checkbox">
+                                <label class="choice-label" for="q4-opt-1"></label>
+                            </div>
+                            <div class="col-6 col-md-6 mb-3">
+                                <input type="checkbox" name="q4-opt-2" id="q4-opt-2" class="choice-checkbox">
+                                <label class="choice-label" for="q4-opt-2"></label>
+                            </div>
+                            <div class="col-6 col-md-6 mb-3">
+                                <input type="checkbox" name="q4-opt-3" id="q4-opt-3" class="choice-checkbox">
+                                <label for="q4-opt-3" class="choice-label"></label>
+                            </div>
+                            <div class="col-6 col-md-6 mb-3">
+                                <input name="q4-opt-4" id="q4-opt-4" type="checkbox" class="choice-checkbox">
+                                <label for="q4-opt-4" class="choice-label"></label>
+                            </div>
+                        </div>
+                        <button class="btn btn-dark mb-5" onclick="checkAnswer(this)">Antwort überprüfen</button>
+                        <p class="feedback"></p>
+                    </div>-->
+
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-dark" onclick="scrollToNextSection()">Weiter</button>
+                        <small class="text-muted">Lektion 5/10</small>
+                    </div>
+                </div>
+
+
+                <div class="row featurette mb-5 section">
+
+                    <div class="col-md-7">
+                        <h3 class="pb-3 font-italic">
+                            Beliebte Arten von Phishing
+                        </h3>
+                        <h2 class="featurette-heading">(Massen-) E-Mail-Phishing</h2>
+                        <p class="">Beim Massen-Phishing versenden Betrüger massenhaft gefälschte E-Mails und
+                            hoffen, dass jemand auf den Köder hereinfällt. Oft imitieren sie dabei bekannte Marken,
+                            Banken oder Online-Händler. Die E-Mails enthalten Links zu gefälschten Websites, die den
+                            Anschein erwecken, echt zu sein, aber darauf abzielen, Passwörter oder Bankdaten zu stehlen.
+                            Emotionen wie Dringlichkeit („Ihr Konto wurde gesperrt!“) oder Neugier („Problem mit Ihrer
+                            Bestellung“) sind beliebte Mittel, um die Opfer zum Handeln zu bewegen.</p>
+                        <p>Erkennen und Reagieren: Tipps zum Umgang mit E-Mail-Phishing-Angriffen</p>
+                        <ul>
+                            <li><span class="font-weight-bold">Ungenaue oder generische Anrede:</span> E-Mails, die dich mit "Sehr geehrter Kunde" oder ähnlichem ansprechen, anstatt deinen Namen zu verwenden.</li>
+                            <li><span class="font-weight-bold">Fehler in Rechtschreibung und oder Grammatik: </span> Professionelle Unternehmen achten auf ihre Kommunikation. Rechtschreib- oder Grammatikfehler sind oft ein Zeichen für Phishing.</li>
+                            <li><span class="font-weight-bold">Verdächtige Links:</span> Bewege den Mauszeiger über Links, ohne zu klicken, um die tatsächliche URL zu sehen. Oft führen sie zu einer ganz anderen Webseite als angegeben. Gib' auf diesen Webseiten niemals persönliche Daten preis, fülle keine Formulare aus und lade keine Dateien herunter!</li>
+                            <li><span class="font-weight-bold">Anhänge:</span> Phishing-E-Mails enthalten oft Anhänge, in denen du explizit aufgefordert wirst diese zu öffnen. Bekommst du eine unerwartete E-Mail, darfst du eine solche Datei keinesfalls herunterladen oder gar öffnen. In der Regel beinhaltet diese Datei ein schädliches Programm.</li>
+                            <li><span class="font-weight-bold">Dringlichkeit und Angst:</span> Die Nachricht drängt dich, sofort zu handeln, z.B. „Ihr Konto wurde gesperrt!“ oder „Zahlen Sie jetzt, um Ihre Daten zu sichern!“.</li>
+                            <li><span class="font-weight-bold">E-Mails von Unternehmen bei dem Du kein Kunde bist:</span> Erhältst du Mails mit Zahlungsaufforderungen, Mahnungen, Vertragsänderungen oder Drohungen durch ein Inkasso-Unternehmen von einer Bank oder anderen Dienstleistern, mit denen du keine Geschäftsbeziehung hast oder die deine E-Mail-Adresse nicht kennen können, lösche diese sofort</li>
+                        </ul>
+                        <!--<div class="quiz-container">
+                            <h3>Quizfrage 5</h3>
+                            <p class="question-text"></p>
+                            <div class="choices row">
+                                <div class="col-6 col-md-6 mb-3">
+                                    <input type="checkbox" name="q5-opt-1" id="q5-opt-1" class="choice-checkbox">
+                                    <label class="choice-label" for="q5-opt-1"></label>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <input type="checkbox" name="q5-opt-2" id="q5-opt-2" class="choice-checkbox">
+                                    <label class="choice-label" for="q5-opt-2"></label>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <input type="checkbox" name="q5-opt-3" id="q5-opt-3" class="choice-checkbox">
+                                    <label for="q5-opt-3" class="choice-label"></label>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <input name="q5-opt-4" id="q5-opt-4" type="checkbox" class="choice-checkbox">
+                                    <label for="q5-opt-4" class="choice-label"></label>
+                                </div>
+                            </div>
+                            <button class="btn btn-dark mb-5" onclick="checkAnswer(this)">Antwort überprüfen</button>
+                            <p class="feedback"></p>
+                        </div>-->
+
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-dark" onclick="scrollToNextSection()">Weiter</button>
+                            <small class="text-muted">Lektion 6/10</small>
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+                             style="width: 550px;"
+                             src="/images/mass%20phishing.png"
+                             data-holder-rendered="true">
+                    </div>
+
+                </div>
+
+                <div class="row featurette mb-5 section">
+                    <div class="col-md-7 order-md-2">
+                        <h2 class="featurette-heading">Spear-Phishing
+                        </h2>
+                        <p class="">Spear-Phishing ist gezielt und raffiniert. Es ist inspiriert vom Speerfischen,
+                            der gezielten Unterwasserjagd mittels Speer oder Harpune.
+                            Hier richten sich Betrüger an bestimmte Personen, meist mit privilegiertem Zugang zu
+                            sensiblen Daten von Unternehmen. Die Angreifer recherchieren häufig über ihre Opfer in
+                            sozialen Netzwerken und auf anderen Websites. Auf diese Weise können sie ihre Mitteilungen anpassen
+                            und authentischer wirken. Spear-Phishing ist besonders schwer zu erkennen, da die Angreifer direkte Ansprachen verwenden, Bezug auf spezifische Ereignisse oder Projekte nehmen und sogar Firmenstrukturen berücksichtigen können.
+                            Oft ist Spear Phishing der erste Schritt, einer mehrstufigen Angriffskette auf Unternehmen.
+                        </p>
+                        <p>Erkennen und Reagieren: Tipps zum Umgang mit Spear-Phishing-Angriffen</p>
+                        <ul>
+                            <li><span class="font-weight-bold">Aufforderung zu ungewöhnlichen Handlungen:</span> Die Nachricht fordert dich zu Handlungen auf, die außerhalb des normalen Arbeitsablaufs liegen, wie z.B. eine dringende Überweisung oder das Teilen vertraulicher Daten. Frage bei deinem Vorgesetzten oder der zuständigen Person über die dir bekannten und sicheren Kommunikationswege nach, bevor du handelst. Antworte nicht direkt auf die E-Mail, um den Kontakt mit möglichen Angreifern zu vermeiden.</li>
+                            <li><span class="font-weight-bold">Forderung nach Vertraulichkeit: </span> Du wirst gebeten, die Anfrage vertraulich zu behandeln und nicht mit anderen zu besprechen, was in deinem Umfeld ungewöhnlich sein könnte. Sei misstrauisch gegenüber Anfragen, die Vertraulichkeit fordern und die nicht in deinen üblichen Arbeitsablauf passen. Besprich die Anfrage trotzdem mit einem vertrauenswürdigen Kollegen oder Vorgesetzten, bevor du tätig wirst</li>
+                            <li><span class="font-weight-bold">Subtile Ausdrucksfehler und knappe Formulierungen:</span> Während die meisten Spear-Phishing-E-Mails sehr gut formuliert sind, können gelegentlich kleine Fehler in der Sprache oder im Stil auf eine Fälschung hinweisen. Ein weiterer Indikator könnte die Länge der Nachricht sein, oft ist diese kurz gehalten. Wenn du Zweifel hast, ob die E-Mail echt ist, konsultiere einen Kollegen oder den IT-Support, bevor du reagierst.</li>
+                            <li><span class="font-weight-bold">Anforderung sensibler Informationen:</span> Es wird um sensible Informationen wie Passwörter, Bankdaten oder vertrauliche Unternehmensinformationen gebeten. Gib niemals sensible Informationen wie Passwörter, Bankdaten oder vertrauliche Unternehmensinformationen über E-Mail weiter. Überprüfe die Anfrage über offizielle Kanäle und informiere deinen IT-Sicherheitsbeauftragten.</li>
+                            <li><span class="font-weight-bold">Dringlichkeit: </span> Die Nachricht setzt dich unter Druck, sofort zu handeln, beispielsweise eine dringende Überweisung zu tätigen oder ein Dokument zu überprüfen. Lass dich nicht von einer dringenden Aufforderung unter Druck setzen. Nimm dir Zeit, die Echtheit der Anfrage zu überprüfen, indem du den Absender über bekannte Kommunikationswege kontaktierst oder Rücksprache mit einem Vorgesetzten hältst.</li>
+                            <li><span class="font-weight-bold">Absender: </span>Die Nachricht scheint von einer Person oder Organisation zu stammen, die du kennst, etwa einem Kollegen, Chef oder Geschäftspartner. Überprüfe auch hier die E-Mail-Adresse genau – sowohl Name als auch Domain könnten verdächtig sein. Manchmal verwenden Angreifer jedoch auch kompromittierte E-Mail-Konten, um den Angriff glaubwürdiger erscheinen zu lassen. Halte im Zweifelsfall Rücksprache über bekannte, sichere Kommunikationswege.</li>
+                        </ul>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-dark" onclick="scrollToNextSection()">Weiter</button>
+                            <small class="text-muted">Lektion 7/10</small>
+                        </div>
+                    </div>
+                    <div class="col-md-5 order-md-1 text-center">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
+                             alt="Spear Phishing Illustration"
+                             style="width: 550px;"
+                             src="/images/Hook.png"
+                             data-holder-rendered="true">
+                    </div>
+                </div>
+
+                <div class="row featurette mb-5 section">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">Quishing<span class="text-muted"> - Betrug per QR-Code</span>
+                        </h2>
+                        <p class="">QR-Codes sind heute allgegenwärtig und bieten eine schnelle, unkomplizierte
+                            Möglichkeit,
+                            Daten zu lesen, lange URLs zu umgehen und Informationen vom Analogen ins Digitale zu
+                            übertragen. Ob es sich um Restaurantmenüs,
+                            Eintrittskarten, Geodaten oder persönliche Visitenkarten handelt – ein einfacher Scan mit
+                            dem Smartphone reicht aus, um die Informationen blitzschnell abzurufen.
+                            Doch genau diese Praktik machen sich Cyberkriminelle zunutze. In betrügerischen E-Mails, <span class="font-weight-bold">Briefen, auf E-Ladesäulen und gefälschten Strafzetteln </span>, die
+                            scheinbar von vertrauenswürdigen Quellen wie Banken oder Behörden stammen,
+                            fordern sie zum Scannen von QR-Codes auf. Einmal gescannt, wird das Opfer auf eine
+                            gefälschte Webseite geleitet, die entweder Schadsoftware auf das Gerät spielt oder versucht,
+                            sensible Daten wie Bankinformationen zu stehlen. Besonders gefährlich ist, dass Virenscanner
+                            QR-Codes oft als harmlose Bilder einstufen – und somit keine Bedrohung erkennen können.</p>
+                        <p>Erkennen und Reagieren: Tipps zum Umgang mit Quishing-Angriffen</p>
+                        <ul>
+                            <li><span class="font-weight-bold">QR-Codes in E-Mails oder Briefen:</span> Sei vorsichtig bei QR-Codes, besonders wenn sie zur „Verifizierung“ oder „Aktualisierung“ deiner Daten auffordern. überprüfe die Legitimität der Anfrage, indem du die offizielle Webseite manuell aufrufst. </li>
+                            <li><span class="font-weight-bold">Unerwartete Aufforderungen: </span> Wenn du einen QR-Code gescannt hast und auf einer Webseite landest, die nach persönlichen Informationen fragt (das können auch vermeintliche Login Seiten sein wie beispielsweise Instagram), sei extrem vorsichtig. Gib keine sensiblen Informationen preis und überprüfe die URL der Webseite sorgfältig.</li>
+                            <li><span class="font-weight-bold">Kein Kontext: </span> Scanne keine QR-Codes, die ohne klare Erklärung oder Kontext bereitgestellt werden. Legitime QR-Codes sind in der Regel begleitet von Informationen darüber, warum du sie scannen solltest.</li>
+
+                        </ul>
+                        <!--
+                        <div class="quiz-container">
+                            <h3>Quizfrage 7</h3>
+                            <p class="question-text"></p>
+                            <div class="choices row">
+                                <div class="col-6 col-md-6 mb-3">
+                                    <input type="checkbox" name="q7-opt-1" id="q7-opt-1" class="choice-checkbox">
+                                    <label class="choice-label" for="q7-opt-1"></label>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <input type="checkbox" name="q7-opt-2" id="q7-opt-2" class="choice-checkbox">
+                                    <label class="choice-label" for="q7-opt-2"></label>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <input type="checkbox" name="q7-opt-3" id="q7-opt-3" class="choice-checkbox">
+                                    <label for="q7-opt-3" class="choice-label"></label>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <input name="q7-opt-4" id="q7-opt-4" type="checkbox" class="choice-checkbox">
+                                    <label for="q7-opt-4" class="choice-label"></label>
+                                </div>
+                            </div>
+                            <button class="btn btn-dark mb-5" onclick="checkAnswer(this)">Antwort überprüfen</button>
+                            <p class="feedback"></p>
+                        </div>-->
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-dark" onclick="scrollToNextSection()">Weiter</button>
+                            <small class="text-muted">Lektion 8/10</small>
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
+                             alt="QR Code an einer Angel"
+                             style="width: 550px;"
+                             src="/images/Squishing.png"
+                             data-holder-rendered="true">
+                    </div>
+                </div>
+
+                <div class="row featurette mb-5 section">
+                    <div class="col-md-7 order-md-2">
+                        <h2 class="featurette-heading">Smishing
+                        </h2>
+                        <p class="">Smishing ist Phishing per SMS. Betrüger senden Textnachrichten, die wie echte
+                            Benachrichtigungen von Ihrem Mobilfunkanbieter oder Versanddienstleister aussehen. Sie
+                            bieten vermeintliche „Geschenke“ an oder fordern dazu auf, Kreditkartendaten zu
+                            aktualisieren. Oft sind solche Nachrichten auch als Paketbenachrichtigungen getarnt, um das
+                            Opfer zur Zahlung oder Eingabe von Daten zu verleiten.</p>
+                        <p>Erkennen und Reagieren: Tipps zum Umgang mit Smishing-Angriffen</p>
+                        <ul>
+                            <li><span class="font-weight-bold">Unbekannter Absender:</span> Öffne keine Links in SMS-Nachrichten von unbekannten oder ungewöhnlichen Nummern. Wenn die Nachricht behauptet, von einer vertrauenswürdigen Organisation zu stammen, kontaktiere diese Organisation direkt über eine bekannte, offizielle Nummer. </li>
+                            <li><span class="font-weight-bold">Dringlichkeit: </span> Die Nachricht fordert dich auf, sofort zu handeln, z.B. „Ihr Konto wurde kompromittiert, klicken Sie hier!“. Legitime Organisationen werden selten dringende Anfragen per SMS senden. Nimm dir Zeit, die Echtheit der Nachricht zu überprüfen.</li>
+                            <li><span class="font-weight-bold">Kurzlinks: </span> Sei besonders vorsichtig bei Links, die über Kurz-URL-Dienste wie bit.ly verkürzt wurden. Verwende einen Link-Vorschau-Dienst oder gib die offizielle URL manuell in deinen Browser ein.</li>
+                            <li><span class="font-weight-bold">Ungewöhnliche Inhalte: </span> Ignoriere Nachrichten, die ungewöhnliche Inhalte wie Geldgewinne oder Belohnungen versprechen. Diese sind oft Lockmittel für Smishing-Angriffe.</li>
+
+                        </ul>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-dark" onclick="scrollToNextSection()">Weiter</button>
+                            <small class="text-muted">Lektion 9/10</small>
+                        </div>
+                    </div>
+                    <div class="col-md-5 order-md-1 text-center">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+                             style="width: 550px;"
+                             src="/images/message.png"
+                             data-holder-rendered="true">
+                    </div>
+                </div>
+
+                <div class="row featurette mb-5 section">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">Vishing</h2>
+                        <p class="">Vishing steht für „Voice Phishing“ und findet per Telefonanruf statt.
+                            Hierbei wirst du durch einen verpassten Anruf zum Rückrufen verleitet.
+                            Ein automatisiertes System ruft an und legt sofort auf. Rufst du zurück, erreichst du die
+                            Täter.
+                            Dabei geben sich Betrüger oft als Mitarbeiter von Banken, Software-Firmen, Kreditkartenunternehmen oder sogar
+                            der
+                            Polizei aus. Dabei fließen Elemente des Social Engineerings ein, in dem die Betrüger ihre
+                            Opfer
+                            unter Druck setzen und sie zur Herausgabe von sensiblen Daten manipulieren.
+                            Meist schildert der Angreifer am Telefon ein Problem, von dem du zum ersten Mal hörst. Um das Problem zu lösen, fordert der Visher persönliche Daten und appelliert an die Dringlichkeit der Situation und will sofortiges, schnelles Handel provozieren.
+                        </p>
+                        <p>Erkennen und Reagieren: Tipps zum Umgang mit Vishing-Angriffen</p>
+                        <ul>
+                            <li><span class="font-weight-bold">Unerwartete Anrufe: </span> Öffne keine Links in SMS-Nachrichten von unbekannten oder ungewöhnlichen Nummern. Du erhältst einen unerwarteten Anruf von jemandem, der behauptet, von deiner Bank, der Polizei oder einem anderen offiziellen Organ zu sein. Beende den Anruf und kontaktiere die Organisation über eine offizielle, dir bekannte Nummer. </li>
+                            <li><span class="font-weight-bold">Dringlichkeit und Druck: </span> Der Anrufer drängt dich, sofort zu handeln, beispielsweise Geld zu überweisen oder persönliche Informationen preiszugeben. Lass dich davon nicht beeindrucken und frage den Anrufer zunächst nach Verifizierungsmöglichkeiten, z.B. nach einer Rückrufnummer oder einer offiziellen Kontaktmethode. Überprüfe diese Verifizierung, indem du die Nummer oder Kontaktmethode selbstständig über bekannte, offizielle Kanäle recherchierst. Sei misstrauisch, wenn der Anrufer auf eine Verifizierung nicht eingeht oder keine Rückrufmöglichkeit anbietet.</li>
+                            <li><span class="font-weight-bold">Ungewöhnliche Anforderungen: </span>Der Anrufer bittet um Informationen, die ein legitimes Unternehmen normalerweise nicht telefonisch verlangen würde, wie Passwörter oder PINs. Gib niemals vertrauliche Informationen wie Passwörter oder PINs am Telefon weiter. </li>
+
+                        </ul>
+
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-dark" onclick="scrollToNextSection()">Weiter</button>
+                            <small class="text-muted">Lektion 10/10</small>
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+                             style="width: 550px;"
+                             src="/images/Vishing_new.png"
+                             data-holder-rendered="true">
+                    </div>
+                </div>
+
+
+                <div class="section">
+                    <div id="intro-quiz-results"></div>
+                    <a href="/trainings" class="btn btn-dark">Training abschließen</a>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Blitz Quiz Modal -->
+    <div class="modal fade" id="blitzQuizModal" tabindex="-1" aria-labelledby="blitzQuizModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blitzQuizModalLabel">Blitz Quiz</h5>
+                    <div id="quiz-timer" class="ms-auto">00:00</div>
+                    <button type="button" class="btn-close" id="close-quiz-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="blitz-quiz-questions-container">
+                        <!-- Hier kommen dynamisch die Fragen rein -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Finde das erste Element mit dem Attribut data-user-email
+        window.globalData = {
+            questions: JSON.parse('{{{json questions}}}')
+        };
+        console.log(window.globalData.questions);
+    });
+</script>
+<script src="/js/introToPhishing.js"></script>
+</body>
+</html>
