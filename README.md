@@ -1,5 +1,14 @@
 # ProtoPhish
 
+## Änderungen nach der Abgabe
+
+### Datenbankkorrektur am [29.09.2024]
+- **Fehlerbeschreibung**: Am [28.09.2024] wurden versehentlich falsche `max_points`-Werte in der `Training`-Tabelle eingetragen.
+- **Änderung**: Die fehlerhaften Werte wurden korrigiert, um die Badge-Funktion zu gewährleisten.
+- **Auswirkungen**: Obwohl die Programmlogik selbst nicht verändert wurde, hatte der Fehler Einfluss auf die Funktionalität der Badges. Die Korrektur stellt die beabsichtigte Funktionalität wieder her.
+- **Transparenzhinweis**: Die fehlerhafte Version der SQLite-Datenbank ist weiterhin in der Commit-Historie einsehbar (siehe Commit `335659a`) und würde zusätzlich dem Root Verzeichnis hinzugefügt.
+
+
 ProtoPhish ist ein Node.js-basiertes Gamification Projekt, das Express.js und SQLite3 verwendet.
 ## Voraussetzungen
 Stelle sicher, dass folgende Software auf deinem System installiert ist:
