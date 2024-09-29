@@ -1,4 +1,5 @@
 # ProtoPhish
+ProtoPhish ist ein Node.js-basiertes Gamification Projekt, das Express.js und SQLite3 verwendet.
 
 ## Änderungen nach der Abgabe
 
@@ -9,7 +10,6 @@
 - **Transparenzhinweis**: Die fehlerhafte Version der SQLite-Datenbank ist weiterhin in der Commit-Historie einsehbar (siehe Commit `335659a`) und würde zusätzlich dem Root Verzeichnis hinzugefügt.
 
 
-ProtoPhish ist ein Node.js-basiertes Gamification Projekt, das Express.js und SQLite3 verwendet.
 ## Voraussetzungen
 Stelle sicher, dass folgende Software auf deinem System installiert ist:
 
