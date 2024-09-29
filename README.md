@@ -37,5 +37,5 @@ http://localhost:5001/
 Es kann jederzeit ein neuer User Registriert werden. Nach jeder Regestrierung wird man zum Login redirected. Dann bitte mit den gewählten Credentials einloggen :)
 
 
-##Anmerkung
-Es handelt sich bei dieser Anwendung um einen Prototypen. Die Badges stehen derzeit nur eingeschränkt zur Verfügung. 
+## Anmerkung
+Es handelt sich bei dieser Anwendung um einen Prototypen. Die Badges stehen derzeit nur eingeschränkt zur Verfügung (ohne Images). 
