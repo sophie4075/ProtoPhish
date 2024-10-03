@@ -21,7 +21,7 @@ Stelle sicher, dass folgende Software auf deinem System installiert ist:
 
 ### 1. Repository klonen
 ```bash
-git clone https://github.com/sophie4075/ProtoPhisg.git
+git clone https://github.com/sophie4075/ProtoPhish.git
 ```
 
 ### 2. In das Projektverzeichnis wechseln
